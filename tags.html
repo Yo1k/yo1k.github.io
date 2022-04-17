@@ -1,0 +1,49 @@
+---
+layout: base
+title: Posts by tag
+permalink: /blog/tags/
+---
+{%- capture tags -%}
+  {%- for tag_and_posts in site.tags -%}
+    {{ tag_and_posts | first }}
+    {%- unless forloop.last -%}
+      {{ site.custom_post_tag_delimiter }}
+    {%- endunless -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{% assign sorted_tags = tags | split: site.custom_post_tag_delimiter | sort_natural %}
+
+<div class="margin-leftright">
+  {%- capture post_tags -%}{{ sorted_tags | join: site.custom_post_tag_delimiter }}{%- endcapture -%}
+  {%- include post-tags.html content = post_tags -%}
+</div>
+<hr>
+{%- for tag in sorted_tags -%}
+  {%- assign posts = site.tags[tag] -%}
+  {%- capture tag_url_percent_encoded -%}{%- include url-percent-encode content = tag -%}{%- endcapture -%}
+  <div id="{{ tag_url_percent_encoded }}" class="highlightable">
+    <p class="post-metadata">
+      <a href="{{ "#" | append: tag_url_percent_encoded }}" class="post-tag">{{ tag }}</a>
+    </p>
+    <div class="margin-leftright">
+      <table class="posts">
+        <tbody>
+          {%- for post in posts -%}
+            {%- unless post.hidden -%}
+              <tr class="clickable" onclick="window.location='{{ post.url }}'">
+                <td class="post-link"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></td>
+                <td class="post-date">
+                  <div class="post-metadata">
+                    {%- assign formatted_date = post.date | date: "%Y-%m-%d" -%}
+                    {%- assign post_date = post.custom_post_date | default: formatted_date -%}
+                    {{ post_date }}
+                  </div>
+                </td>
+              </tr>
+            {%- endunless -%}
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endfor %}

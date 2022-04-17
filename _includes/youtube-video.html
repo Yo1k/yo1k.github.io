@@ -1,0 +1,27 @@
+{%- comment -%}<!--
+  include.content is: video-id, splash-image-id, css-aspect-ratio-class, video-title
+  splash-image-id is one of [0, 1, 2, 3, default, hqdefault, maxresdefault] (see https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api/2068371).
+-->{%- endcomment -%}
+{%- assign params = include.content | split: " , " -%}
+{%- assign video_id = params[0] -%}
+{%- assign splash_image_id = params[1] -%}
+{%- assign css_aspect_ratio_class = params[2] -%}
+{%- assign video_title = params[3] -%}
+{%- capture video_url -%}https://youtu.be/{{ video_id }}{%- endcapture -%}
+{%- capture splash_image_url -%}https://img.youtube.com/vi/{{ video_id }}/{{ splash_image_id }}.jpg{%- endcapture -%}
+<div class="iframe-margins">
+  <div class="{{ css_aspect_ratio_class }}">
+    <!-- The allowfullscreen attribute is specified because iOS Safari does not support allow="fullscreen" -->
+    <iframe src="https://www.youtube.com/embed/{{ video_id }}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+<figure class="print-iframe-youtube-video-substitute">
+  {%- comment -%}<!--
+    The usage of inline styles instead of <img> allows to not load images when the <a> element is not displayed, i.e. when the CSS media is "screen".
+    This has a drawback though (at least in the current Chrome browser implementation): if background images do not finish downloading in the short
+    period of time that the browser waits before rendering the preview, then the images are rendered neither in the preview nor in the printed result.
+    Cancelling preview and starting the print process again or simply forcing re-rendering by changing print settings is a workaround.
+  -->{%- endcomment -%}
+  <a href="{{ video_url }}" style="background-image: url({{ splash_image_url }});"></a>
+  <span><a href="{{ video_url }}">{{ video_title }}</a></span>
+</figure>

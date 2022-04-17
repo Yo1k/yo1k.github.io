@@ -1,0 +1,48 @@
+#toolbar {
+  top: 0em;
+  line-height: 1;
+  position: sticky;
+  overflow: auto;
+  z-index: 2;//appear on top of other elements (without this style transparent elements appear on top of this element)
+  padding-left: $spacing-unit-em;
+  padding-right: $spacing-unit-em;
+  background: linear-gradient(to right, $site-navigation-background-color, $toolbar-background-color, $site-navigation-background-color);
+}
+
+#site-navigation-menu-toggle-container {
+  float: left;
+}
+
+#site-search-form-container {
+  text-align: right;
+
+  #site-search-form {
+    input[type="search"] {
+      background-image: url("/assets/img/search.svg");
+      background-repeat: no-repeat;
+      background-size: 1.3em;
+      background-position: left 0.0em bottom 50%;
+      padding-left: 1.4em;
+    }
+  }
+}
+
+#site-navigation-portrait-menu {
+  margin-top: $spacing-unit-em;
+}
+
+@media screen and (orientation: landscape) {
+  #toolbar {
+    margin-left: $site-navigation-width + $spacing-unit-em * 2 /*we need to account for padding that site-navigation has*/;
+  }
+
+  #site-navigation-portrait-menu {
+    display: none;
+  }
+}
+
+@media print {
+  #toolbar {
+    display: none;
+  }
+}

@@ -1,0 +1,4 @@
+<nav id="{{ include.content }}">
+  {%- assign first_category = page.categories | first -%}
+  {%- assign category = page.custom_post_category_to_display | default: first_category | default: "" -%}
+</nav>

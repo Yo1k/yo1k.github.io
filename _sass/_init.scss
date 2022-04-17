@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Open Sans";
+  font-display: swap;
+  src:
+    local("OpenSans"),
+    local("OpenSans-Regular"),
+    local("Open Sans Regular"),
+    url("/assets/font/OpenSans/OpenSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-display: swap;
+  src:
+    local("OpenSans-Bold"),
+    local("Open Sans Bold"),
+    url("/assets/font/OpenSans/OpenSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: italic;
+  font-display: swap;
+  src:
+    local("OpenSans-Italic"),
+    local("Open Sans Italic"),
+    url("/assets/font/OpenSans/OpenSans-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local("OpenSans-BoldItalic"),
+    local("Open Sans Bold Italic"),
+    url("/assets/font/OpenSans/OpenSans-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Inter";
+  unicode-range: U+21a9, U+25b6;
+  font-display: swap;
+  src:
+    local("Inter"),
+    local("Inter-Regular"),
+    local("Inter Regular"),
+    url("/assets/font/Inter/Inter-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inter";
+  font-weight: bold;
+  unicode-range: U+21a9, U+25b6;
+  font-display: swap;
+  src:
+    local("Inter-Bold"),
+    local("Inter Bold"),
+    url("/assets/font/Inter/Inter-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  font-display: swap;
+  src:
+    local("JetBrainsMono"),
+    local("JetBrainsMono-Regular"),
+    local("JetBrainsMono Regular"),
+    url("/assets/font/JetBrainsMono/JetBrainsMono-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  font-weight: bold;
+  font-display: swap;
+  src:
+    local("JetBrainsMono-Bold"),
+    local("JetBrainsMono Bold"),
+    url("/assets/font/JetBrainsMono/JetBrainsMono-Bold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  font-style: italic;
+  font-display: swap;
+  src:
+    local("JetBrainsMono-Italic"),
+    local("JetBrainsMono Italic"),
+    url("/assets/font/JetBrainsMono/JetBrainsMono-Italic.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+  src:
+    local("JetBrainsMono-BoldItalic"),
+    local("JetBrainsMono Bold Italic"),
+    url("/assets/font/JetBrainsMono/JetBrainsMono-BoldItalic.woff2") format("woff2");
+}
+
+$base-font-family: "Open Sans", "Inter",
+  "Segoe UI", "Segoe UI Emoji", "Roboto", "Helvetica Neue", "Arial", sans-serif;
+$monospace-font-family: "JetBrainsMono",
+  "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", monospace;
+
+$font-size: 1em;
+$medium-font-size: 0.9 * $font-size;
+$small-font-size: 0.85 * $font-size;
+$block-monospace-font-size: 0.8 * $font-size;
+$inline-monospace-font-size: 0.85 * $font-size;
+$post-metadata-font-size: $small-font-size;
+
+$font-weight: 400;
+$header-font-weight: 500;
+
+$site-navigation-width: 13.4em;
+$spacing-unit-em: 0.775em; // depends on the size of the text in the current element
+$spacing-unit-percentage: 1%; // depends on the size of the parent element
+$border-radius: 0.15em;
+$block-padding: 0.2em;
+$inline-code-padding: 0.25em;
+$line-height: 1.7;
+$code-line-height: 1.6;
+$code-block-max-height: 60em;
+$margin-leftright-percentage: $spacing-unit-percentage * 2.5;
+$outline-width: 0.2em;
+
+$border-color-darken-percentage: 5%;
+$site-background-color: white;
+$font-color: rgb(50, 50, 50);
+// see https://sass-lang.com/documentation/modules/color for other color functions
+$insignificant-font-color: lighten($font-color, 30%);
+$quotation-background-color: desaturate(lighten(linen, 2%), 20%);
+$quotation-border-color: darken($quotation-background-color, $border-color-darken-percentage);
+$quotation-font-color: desaturate(darken($quotation-background-color, 40%), 10%);
+$code-font-backgroung-color: lighten(lavender, 3.5%);
+$header-font-color: steelblue;
+$hover-header-font-color: lighten($header-font-color, 15%);
+$link-color: cornflowerblue;
+$link-hover-color: coral;
+$toolbar-background-color: lighten($link-color, 30%);
+$site-navigation-background-color: $site-background-color;
+$site-layout-markup-color: darken(
+  $site-navigation-background-color, $border-color-darken-percentage);
+$site-navigation-menu-font-color: $header-font-color;
+$site-navigation-hover-font-color: coral;
+$page-layout-markup-color: lighten($header-font-color, 35%);
+$code-background-color: $site-background-color;
+$code-border-color: $quotation-border-color;
+$table-header-background-color: $code-font-backgroung-color;
+$table-border-color: $quotation-border-color;
+$table-zebra-color: lighten(ghostwhite, 0.4%);
+$post-metadata-font-color: $header-font-color;
+$post-tag-decoration-color: thistle;
+$info-background-color: desaturate(lighten($page-layout-markup-color, 13%), 0%);
+$info-border-color: darken($info-background-color, $border-color-darken-percentage);
+$info-font-color: desaturate(darken($info-background-color, 50%), 10%);
+$button-font-color: $link-color;
+$button-hover-font-color: $link-color;
+$button-active-font-color: darken($link-color, 7%);
+
+$unhovered-svg-button-opacity: 0.5;
+$site-navigation-menu-arrow: "\25b6"; // BLACK RIGHT-POINTING TRIANGLE
+$link-after-content: none;
+$section-link-after-content: "\00a7"; // SECTION SIGN
+$reverse-footnote-link: "\21a9"; // LEFTWARDS ARROW WITH HOOK
+$border-widthstyle: thin solid;

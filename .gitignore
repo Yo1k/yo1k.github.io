@@ -1,0 +1,8 @@
+**/.DS_Store
+**/.idea/
+**/*.iml
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile
+Gemfile.lock

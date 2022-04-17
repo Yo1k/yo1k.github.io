@@ -1,0 +1,30 @@
+#site-navigation-landscape-menu,
+#site-navigation-portrait-menu {
+  ul {
+    list-style: none;
+    margin: 0em;
+    white-space: nowrap;
+
+    li {
+      margin-bottom: $spacing-unit-em / 0.75;
+
+      a {
+        color: $site-navigation-menu-font-color;
+
+        &:before {
+          content: $site-navigation-menu-arrow;
+          padding-right: $block-padding * 1.5;
+          color: $site-navigation-hover-font-color;
+          visibility: hidden;
+        }
+        &:hover::before {
+          visibility: visible;
+        }
+      }
+
+      a.selected-menu {
+        color: $site-navigation-hover-font-color;
+      }
+    }
+  }
+}

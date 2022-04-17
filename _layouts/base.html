@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+  {%- include head.html -%}
+  <body>
+    {%- include site-navigation.html -%}
+    {%- include toolbar.html -%}
+    <div id="right-side-area">
+      {%- include main.html -%}
+      {%- capture footer -%}{%- include footer.markdown -%}{%- endcapture-%}
+      {{ footer | markdownify }}
+    </div>
+  </body>
+</html>

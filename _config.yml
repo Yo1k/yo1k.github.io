@@ -1,0 +1,54 @@
+encoding: UTF-8
+timezone: Etc/UTC
+language: en
+permalink: /blog/:slug
+# see https://jekyllrb.com/docs/configuration/options/#build-command-options
+show_drafts: false
+exclude: [readme.markdown, license.txt]
+kramdown:
+  # See https://jekyllrb.com/docs/configuration/markdown/.
+  #
+  # smart_quotes:
+  #
+  #   first parameter : how an opening apostrophe is transformed
+  #                     or apostrophe like in "I'm"
+  #           default : ' -> ‘ (lsquo)
+  #              apos : ' -> '
+  #
+  #   second parameter : how a closing apostrophe is transformed
+  #           default : ' -> ’ (rsquo)
+  #              apos : ' -> '
+  #
+  #   third parameter : how an opening double quote is transformed
+  #           default : " -> “ (ldquo)
+  #              quot : " -> "
+  #
+  #   fourth parameter : how a closing double quote is transformed
+  #           default : " -> ” (rdquo)
+  #              quot : " -> "
+  #
+  #   Default kramdown config
+  #     smart_quotes: ["rdquo", "rsquo", "ldquo", "rdquo"]
+  #
+  #   Programmer's world compliant config
+  #     smart_quotes: ["apos", "apos", "quot", "quot"]
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+  # use ZERO WIDTH SPACE to "disable" Kramdown backlink text
+  footnote_backlink: "\u200b"
+custom_plaintext_title: Permanent head Damage
+custom_author: Stanislav Kovalenko
+custom_author_email: public.skovalenko@gmail.com
+custom_linkedin: https://www.linkedin.com
+custom_github: https://github.com/Yo1k
+custom_feed_id_year: 2022
+custom_feed_id_authority_name: kovalenko.place
+# The only way to pass variable number of parameters to includes in Jekyll is to join them
+# and pass a single parameter of type String
+# (see https://jekyllrb.com/docs/includes/#passing-parameters-to-includes
+# and https://shopify.github.io/liquid/basics/types/#string).
+# Thus, in order to pass an Array of tags,
+# I have to join them (https://shopify.github.io/liquid/filters/join/),
+# pass the result and split it back (https://shopify.github.io/liquid/filters/split/).
+# This character (END OF TEXT) is used as a delimiter when joining/splitting tags,
+# therefore it cannot be used as part of a tag.
+custom_post_tag_delimiter: \u0002

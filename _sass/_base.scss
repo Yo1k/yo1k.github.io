@@ -1,0 +1,416 @@
+:root {
+  font-family: $base-font-family;
+  font-size: 100%;
+  font-weight: $font-weight;
+  background: $site-background-color;
+  color: $font-color;
+  white-space: normal;
+}
+
+:root, html, body, div,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dt, dd,
+ol, ul,
+figure, hr {
+  margin: 0em;
+  padding: 0em;
+}
+
+body {
+  font-size: $font-size;
+  line-height: $line-height;
+}
+
+#right-side-area {
+  overflow: auto;
+}
+@media screen and (orientation: landscape) {
+  #right-side-area {
+    margin-left: $site-navigation-width + $spacing-unit-em * 2 /*we need to account for padding that site-navigation has*/;
+  }
+}
+
+main {
+  padding-top: $spacing-unit-em;
+  padding-left: $spacing-unit-em;
+  padding-right: $spacing-unit-em;
+}
+@media not print {
+  main {
+    max-width: 55em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/**
+ * Vertical rhythm.
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl,
+ul, ol,
+hr,
+table, figure,
+div.iframe-margins, div.iframe-margins-right25, div.iframe-margins-right40,
+div.info-block {
+  margin-bottom: $spacing-unit-em;
+}
+li > ol,
+li > ul {
+  margin-top: $spacing-unit-em / 2;
+  margin-bottom: 0em;
+}
+li p {
+    margin-bottom: $spacing-unit-em / 3;
+}
+li {
+  margin-bottom: $spacing-unit-em / 2;
+}
+
+/**
+ * Horizontal margins for some elements.
+ */
+blockquote, pre,
+dl, ul, ol,
+table, figure,
+div.info-block,
+.margin-leftright {
+  margin-left: $margin-leftright-percentage;
+  margin-right: $margin-leftright-percentage;
+}
+
+hr {
+  border: $border-widthstyle $page-layout-markup-color;
+  border-bottom: 0em;
+}
+
+b, strong {
+  font-weight: bolder;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $header-font-weight;
+  color: $header-font-color;
+}
+h1 {
+  font-size: $font-size * 1.88;
+}
+h2 {
+  font-size: $font-size * 1.75;
+}
+h3 {
+  font-size: $font-size * 1.60;
+}
+h4 {
+  font-size: $font-size * 1.47;
+}
+h5 {
+  font-size: $font-size * 1.34;
+}
+h6 {
+  font-size: $font-size * 1.22;
+}
+
+/**
+ * Outline (e.g. when navigating over all interactive elements with Tab).
+ * One should never remove outline because it reduces accessibility.
+ */
+a, button, input {
+  &:focus {
+    outline-color: $link-hover-color;
+    outline-width: $outline-width;
+    outline-offset: 0em;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:after {
+    font-size: $small-font-size;
+    vertical-align: super;
+    content: $link-after-content;
+  }
+  &:hover {
+    color: $link-hover-color;
+  }
+  &:active {
+  }
+  &:visited {
+  }
+}
+a.section-link {
+  opacity: 0.3;
+  color: inherit;
+
+  &:after {
+    content: $section-link-after-content;
+    margin-right: $block-padding;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+}
+@media print {
+  a.section-link {
+    display: none;
+  }
+}
+
+abbr {
+  position: relative;
+  display: inline-block;
+  font-variant: none;
+}
+@media not print {
+  abbr {
+    border-bottom: $border-widthstyle darken($info-background-color, $border-color-darken-percentage);
+  
+    &:hover::after {
+      font-family: $base-font-family;
+      font-size: $small-font-size;
+      font-weight: $font-weight;
+      font-variant: normal;
+      font-style: normal;
+      text-decoration: none;
+      position: absolute;
+      top: -90%;
+      left: 85%;
+      z-index: 1;
+      padding: $block-padding;
+      white-space: nowrap;
+      overflow: auto;
+      content: attr(data-title);
+      border-radius: $border-radius;
+      color: $info-font-color;
+      background: lighten($info-background-color, $border-color-darken-percentage / 4);
+      border: $border-widthstyle darken($info-background-color, $border-color-darken-percentage);
+    }
+  }
+}
+
+@mixin highlightable {
+  opacity: 0.5;
+  filter: blur(0.06em);
+
+  &:target {
+    opacity: 1;
+    filter: none;
+  }
+}
+@mixin highlightable2 {
+  @keyframes fading-background {
+    from {
+      background: darken($site-layout-markup-color, 20%);
+    }
+
+    to {
+      background: darken($site-layout-markup-color, 0.5%);
+    }
+  }
+
+  &:target {
+    animation-name: fading-background;
+    animation-duration: 1s;
+    background: darken($site-layout-markup-color, 0.5%);
+    border-radius: $border-radius;
+  }
+}
+@media not print {
+  .highlightable {
+    @include highlightable;
+  }
+
+  .highlightable2 {
+    @include highlightable2;
+  }
+}
+
+.clickable,
+a, button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: baseline;
+}
+figure {
+  display: inline-block;
+
+  > figcaption {
+    font-size: $small-font-size;
+    text-align: center;
+    color: $insignificant-font-color;
+  }
+}
+
+span.insignificant {
+  font-size: $small-font-size;
+  color: $insignificant-font-color;
+}
+
+button, input {
+  font-family: $base-font-family;
+  font-size: $font-size;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: $outline-width;
+  margin-bottom: $outline-width;
+  border-radius: $border-radius;
+  border-image: none;
+  color: $button-font-color;
+  background-color: lighten($button-font-color, 30%);
+  border: $border-widthstyle darken(lighten($button-font-color, 30%), $border-color-darken-percentage);
+}
+button {
+  &:hover {
+    color: $button-hover-font-color;
+    background-color: lighten($button-hover-font-color, 30%);
+    border: $border-widthstyle darken(lighten($button-hover-font-color, 30%), $border-color-darken-percentage);
+  }
+  &:active {
+    color: $button-active-font-color;
+    background-color: lighten($button-active-font-color, 30%);
+    border: $border-widthstyle darken(lighten($button-active-font-color, 30%), $border-color-darken-percentage);
+  }
+}
+input {
+  color: $button-font-color;
+  background-color: $site-background-color;
+}
+input[type="search"] {
+  -webkit-appearance: none; // prevent fucking iOS Safari from changing the style
+  width: 13em;
+}
+
+/**
+ * Quotations and info blocks
+ */
+q {
+  font-style: italic;
+  color: $quotation-font-color;
+
+  &:before {
+    content: none;
+  }
+  &:after {
+    content: none;
+  }
+}
+blockquote,
+div.info-block {
+  font-style: italic;
+  border: 0em;
+  border-radius: $border-radius;
+  padding: $block-padding;
+  color: $quotation-font-color;
+  background: $quotation-background-color;
+  border: $border-widthstyle $quotation-border-color;
+
+  > :last-child { // this is usually a <p> element
+    margin-bottom: 0em;
+  }
+}
+div.info-block {
+  font-style: normal;
+  color: $info-font-color;
+  background: $info-background-color;
+  border: $border-widthstyle $info-border-color;
+}
+
+:not(code) > table { // <table> elements that are not children of <code> elements
+  border-collapse: collapse;
+  border: $border-widthstyle $table-border-color;
+  th, td {
+    padding: ($block-padding * 2) ($block-padding * 2);
+  }
+  th {
+    font-weight: bolder;
+    background-color: $table-header-background-color;
+    border: $border-widthstyle darken($table-header-background-color, $border-color-darken-percentage);
+  }
+  td {
+    border: $border-widthstyle $table-border-color;
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: $table-zebra-color;
+    }
+  }
+  @media print {
+    tr, tr td, tr th {
+      break-inside: avoid;
+      break-after: auto;
+    }
+  }
+}
+
+/**
+ * Code.
+ */
+pre,
+samp, kbd, var,
+code,
+.monospace {
+  font-family: $monospace-font-family;
+  font-size: $inline-monospace-font-size;
+}
+// inline code
+samp, kbd, var,
+:not(pre) > code {//a <code> element that is a child (direct descendant) of any element but a <pre> element
+  border: 0em;
+  border-radius: $border-radius;
+  padding: $inline-code-padding;
+  background: $code-font-backgroung-color;
+  //color: should not be set because it messes with <a> color scheme (HTML generated from Markdown specifies <code> inside <a> but not vise-versa)
+}
+pre {
+  border: $border-widthstyle $page-layout-markup-color;
+  border-radius: $border-radius;
+  padding: $block-padding;
+  @media not print {
+    overflow: auto;
+  }
+  @media print {
+    code, span {
+      white-space: pre-wrap;//wrap text because when printing there are no scroll-bars
+      overflow-wrap: break-word;
+    }
+  }
+}
+pre code,
+code pre {//reset some styles for those <code> elements that are inside <pre> elements and vice versa
+  font-size: 1em;
+  margin-left: 0em;
+  margin-right: 0em;
+  border: 0em;
+  padding: 0em;
+}
+figure.highlight {
+  display: block;
+}
+figure.highlight,
+code table {//reset margin-bottom to maintain vertical rhythm
+  margin-bottom: 0em;
+  margin-left: 0em;
+  margin-right: 0em;
+}
+pre.highlight,
+figure.highlight > pre {
+  font-size: $block-monospace-font-size;
+  border: $border-widthstyle $code-border-color;
+  line-height: $code-line-height;
+  @media not print {
+    max-height: $code-block-max-height;
+  }
+  background: $code-background-color;
+}
+td.gutter.gl {//separate line numbers from code with a border
+  border-right: $border-widthstyle $code-border-color;
+}

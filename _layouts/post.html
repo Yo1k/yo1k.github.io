@@ -1,0 +1,16 @@
+---
+layout: base
+---
+<article>
+  <h1><a href="{{ post.url | relative_url }}" class="section-link"></a>{{ page.title }}</h1>
+  <div class="post-metadata">
+    {%- if page.tags.size > 0 -%}
+      {%- capture post_tags -%}{{ page.tags | join: site.custom_post_tag_delimiter }}{%- endcapture -%}
+      {%- include post-tags.html content = post_tags -%}
+    {%- endif -%}
+    {%- assign formatted_date = page.date | date: "%Y-%m-%d" -%}
+    {%- assign post_date = page.custom_post_date | default: formatted_date -%}
+    <p>Posted on {{ post_date }}, last updated on {{ page.custom_update_date | date: "%Y-%m-%d" }}</p>
+  </div>
+  {{ content }}
+</article>
