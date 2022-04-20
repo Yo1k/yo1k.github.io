@@ -3,11 +3,24 @@ layout: base
 title: Resume
 custom_description: Junior Python software engineer, PhD in Condensed Matter Physics.
 ---
+{% include common-links-abbreviations.markdown %}
+
+[отдел ТИАМ]: <http://tmas-gpi.ru/index.php>
+
+*[К.ф.-м.н.]:
+{:data-title="кандидат физико-математических наук"}
+*[ИОФ РАН]:
+{:data-title="Институт общей физики им. А.М. Прохорова Российской академии наук"}
+*[отдел ТИАМ]:
+{:data-title="Отдел технологий и измерений атомного масштаба"}
+*[НИУ ВШЭ]:
+{:data-title='Национальный исследовательский университет &quot;Высшая школа экономики&quot;'}
+
 # Станислав Коваленко
 {:.resume-h .resume-invisible-media-not-print}
 ## Начинающий Python программист
 {:.resume-h}
-К.ф-м.н. по специальности "Физика конденсированного состояния"
+К.ф.-м.н. по специальности "Физика конденсированного состояния"
 <div class="resume-external-links resume-invisible-media-not-print">
   <a href="{% link resume.markdown %}">Смотреть резюме онлайн</a><br>
   <a class="button" href="{{ site.custom_github }}" title="GitHub">
@@ -47,7 +60,7 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
         <a href="http://mypy-lang.org/">mypy</a>,
         <a href="https://docs.python.org/3/library/venv.html">venv</a>),
         <a href="https://www.gnu.org/software/bash/">Bash</a>,
-        SQL
+        <span markdown="1">SQL</span>
       </td>
     </tr>
     <tr class="resume-table-no-background">
@@ -71,7 +84,7 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
         <a href="https://git-scm.com/">Git</a>,
         <a href="https://github.com/Yo1k">GitHub</a>,
         Linux, Windows,
-        <a href="https://docs.microsoft.com/en-ca/windows/wsl/https://docs.microsoft.com/en-ca/windows/wsl/">WSL</a>
+        <span markdown="1">[WSL]</span>
       </td>
     </tr>
   </tbody>
@@ -110,7 +123,7 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
 
 <div class="resume-experience" markdown="1">
   Самостоятельное обучение Python с использованием [официальной документации](https://docs.python.org/)
-  (выработал навык быстрой ориентации в ней), текста различных [PEP](https://peps.python.org/)ов,
+  (выработал навык быстрой ориентации в ней), текста различных [PEP]ов,
   книги "[Python 3 Object-Oriented Programming](https://www.amazon.com/Python-Object-Oriented-Programming-maintainable-object-oriented/dp/1789615852)" by Dusty Phillips, 
   открытых лекций на канале [Computer Science Center](https://www.youtube.com/playlist?list=PLlb7e2G7aSpQhNphPSpcO4daaRPeVstku),
   ресурсов [Stack Overflow](https://stackoverflow.com/) и [Real Python](https://realpython.com/).
@@ -119,29 +132,29 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
 <h6 class="resume-h">
   <a href="https://www.hse.ru/" title="НИУ ВШЭ">
     <img src="{% link /assets/img/resume/hse-logo.png %}" alt="Logo" style="width: auto; height: 1.1em;">
-    НИУ ВШЭ
+    <span markdown="1">НИУ ВШЭ</span>
   </a>
   / <span class="resume-insignificant resume-normal-font-weight">Москва, Россия</span>
 </h6>
 _Доцент, Факультет физики_ / <span class="resume-insignificant">Сентябрь 2020&ndash;настоящее время</span>
 
 <h6 class="resume-h">
-  <a href="https://www.gpi.ru/" title="ИОФ РАН">
+  <a href="https://www.gpi.ru" title="ИОФ РАН">
     <img src="{% link /assets/img/resume/gpi-logo.png %}" alt="Logo" style="width: auto; height: 1.1em;">
-    ИОФ РАН
+    <span markdown="1">ИОФ РАН</span>
   </a>
   / <span class="resume-insignificant resume-normal-font-weight">Москва, Россия</span>
 </h6>
-_Младший научный сотрудник, [отдел ТИАМ](http://tmas-gpi.ru/index.php)_ / <span class="resume-insignificant">Апрель 2015&ndash;Сентябрь 2018</span>
+_Младший научный сотрудник, [отдел ТИАМ]_ / <span class="resume-insignificant">Апрель 2015&ndash;Сентябрь 2018</span>
 
 #### Образование
 {:.resume-h}
 ---
 
 <h6 class="resume-h">
-  <a href="https://www.gpi.ru/" title="ИОФ РАН">
+  <a href="https://www.gpi.ru" title="ИОФ РАН">
     <img src="{% link /assets/img/resume/gpi-logo.png %}" alt="Logo" style="width: auto; height: 1.1em;">
-    ИОФ РАН
+    <span markdown="1">ИОФ РАН</span>
   </a>
   / <span class="resume-insignificant resume-normal-font-weight">Москва, Россия</span>
 </h6>

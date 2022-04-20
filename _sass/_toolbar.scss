@@ -10,6 +10,9 @@
 }
 
 #site-navigation-menu-toggle-container {
+  @media screen and (orientation: portrait) {
+    display: none;
+  }
   float: left;
 }
 

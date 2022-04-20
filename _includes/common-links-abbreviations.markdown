@@ -25,6 +25,7 @@
 [LDAP]: <https://www.rfc-editor.org/rfc/rfc4510>
 [Rust]: <https://www.rust-lang.org/>
 [JSON]: <https://www.rfc-editor.org/rfc/rfc8259.html>
+[PEP]: <https://peps.python.org/>
 
 *[iff]:
 {:data-title="if and only if"}
@@ -166,3 +167,5 @@
 {:data-title="Internet Protocol"}
 *[JSON]:
 {:data-title="JavaScript Object Notation"}
+*[PEP]:
+{:data-title="Python Enhancement Proposal"}
