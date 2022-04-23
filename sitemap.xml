@@ -9,7 +9,7 @@ layout: null
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    {%- capture link -%}{%- link resume.markdown -%}{%- endcapture -%}
+    {%- capture link -%}{%- link resume.md -%}{%- endcapture -%}
     <loc>{{ link | absolute_url }}</loc>
     <lastmod>{{ site.time | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>weekly</changefreq>

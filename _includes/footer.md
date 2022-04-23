@@ -1,4 +1,4 @@
-{% include common-links-abbreviations.markdown %}
+{% include common-links-abbreviations.md %}
 
 <footer>
   <p>

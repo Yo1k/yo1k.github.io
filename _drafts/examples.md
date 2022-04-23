@@ -39,11 +39,11 @@ custom_description: Markup and style examples.
   in _config.yml.
 -->{% endcomment %}
 
-{% include common-links-abbreviations.markdown %}
+{% include common-links-abbreviations.md %}
 
 Text before ToC.
 
-{% include toc.markdown %}
+{% include toc.md %}
 
 ## [](#hints){:.section-link}Hints {#hints}
 
