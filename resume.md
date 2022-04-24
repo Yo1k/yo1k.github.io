@@ -126,7 +126,10 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
   (выработал навык быстрой ориентации в ней), текста различных [PEP]ов,
   книги "[Python 3 Object-Oriented Programming](https://www.amazon.com/Python-Object-Oriented-Programming-maintainable-object-oriented/dp/1789615852)" by Dusty Phillips, 
   открытых лекций на канале [Computer Science Center](https://www.youtube.com/playlist?list=PLlb7e2G7aSpQhNphPSpcO4daaRPeVstku),
-  ресурсов [Stack Overflow](https://stackoverflow.com/) и [Real Python](https://realpython.com/).
+  ресурсов [Stack Overflow](https://stackoverflow.com/) и [Real Python](https://realpython.com/).\\
+  Изучение SQL с использованием [bipp SQL tutorial](https://bipp.io/sql-tutorial), 
+  [официальной документации](https://www.postgresql.org/docs/current/sql-syntax.html) PostgreSQL,
+  упражнений на [pgexercises.com](https://www.pgexercises.com).
 </div>
 
 <h6 class="resume-h">
