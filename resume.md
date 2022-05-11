@@ -66,6 +66,7 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
     <tr class="resume-table-no-background">
       <td><code>Фреймворки/библиотеки</code></td>
       <td>
+        <a href="https://flask.palletsprojects.com/">Flask</a>,
         <a href="https://www.psycopg.org/docs/index.html">psycopg2</a>,
         <a href="https://docs.python.org/3.9/library/unittest.html?highlight=unittest#module-unittest">unittest</a>,
         <a href="https://docs.pytest.org">pytest</a>,
@@ -83,6 +84,7 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
       <td>
         <a href="https://git-scm.com/">Git</a>,
         <a href="https://github.com/Yo1k">GitHub</a>,
+        <a href="https://www.docker.com/">Docker</a>,
         Linux, Windows,
         <span markdown="1">[WSL]</span>
       </td>
@@ -95,8 +97,13 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
 ---
 
 <div class="resume-experience" markdown="1">
+* **[qaws](https://github.com/Yo1k/qaws-app)**
+  (Python, Flask, PostgreSQL, Docker)&mdash;веб-сервис: получает POST-запрос от клиента,
+  для его обработки делает GET-запрос к стороннему публичному HTTP API, сохраняет данные полученные
+  от стороннего сервиса в своё хранилище, шлёт ответ на оригинальный POST-запрос. Как сервис так
+  и PostgreSQL запускаются в Docker контейнерах.
 * **[tic-tac-toe](https://github.com/Yo1k/tic-tac-toe)** 
-  (Python, unittest, asciimatics, pylint, mypy) многопользовательская пошаговая игра в процессе разработки.
+  (Python, unittest, asciimatics, pylint, mypy)&mdash;многопользовательская пошаговая игра в процессе разработки.
   Несмотря на простоту бизнес-логики в коде используются:
   * type hints
   * проектные Python ABC (abstract base classes)
@@ -113,7 +120,7 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
   дистрибутивов для разных целевых платформ (в случае использования нативных зависимостей, платформа
   учитывается при поиске и скачивании подходящего артефакта)
 * **[sandbox-python](https://github.com/Yo1k/sandbox-python)**
-  (Python, SQL, psycopg2, pytest, pylint, mypy) - репозиторий для экспериментов, в том числе содержит
+  (Python, PostgreSQL, psycopg2, pytest, pylint, mypy)&mdash;репозиторий для экспериментов, в том числе содержит
   код использующий psycopg2 драйвер для чтения данных из PostgreSQL.
 </div>
 

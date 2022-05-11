@@ -169,3 +169,5 @@
 {:data-title="JavaScript Object Notation"}
 *[PEP]:
 {:data-title="Python Enhancement Proposal"}
+*[PhD]:
+{:data-title="Doctor of Philosophy"}
