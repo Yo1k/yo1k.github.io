@@ -12,6 +12,30 @@ and then transformed by [Jekyll](https://jekyllrb.com/) site generator into file
 This transformation is done automatically by GitHub when a new commit is pushed to the repository and the result is hosted by
 [GitHub Pages](https://help.github.com/en/github/working-with-github-pages).
 
+This Jekyll theme is designed by [Valentin Kovalenko](https://www.kovalenko.link/).
+
+## Instructions 
+1. Install all [prerequisites](https://jekyllrb.com/docs/installation/).
+2. Install specific version of `bundler` gem:
+
+```
+$ gem install bundler -v '~> 2.3.22'
+```
+
+3. From the root of the directory run:
+
+```
+$ bundle install
+```
+
+to install the relevant gems.
+
+4. Build the site and make it available on a local server.
+
+```
+$ bundle exec jekyll serve
+```
+
 ## Misc
 The original GitHub URI <https://yo1k.github.io> is redirected to
 the canonical URI <https://www.kovalenko.place>.
