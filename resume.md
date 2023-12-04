@@ -14,11 +14,19 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
 *[отдел ТИАМ]:
 {:data-title="Отдел технологий и измерений атомного масштаба"}
 *[НИУ ВШЭ]:
-{:data-title='Национальный исследовательский университет &quot;Высшая школа экономики&quot;'}
+{:data-title="Национальный исследовательский университет &quot;Высшая школа экономики&quot;"}
+*[DVC]:
+{:data-title="Data Version Control"}
+*[ОКЗ]:
+{:data-title="Общероссийский классификатор занятий"}
+*[KPMI]:
+{:data-title="Keys to Personal Mastery Inventory"}
+*[ML]:
+{:data-title="Machine learning"}
 
 # Станислав Коваленко
 {:.resume-h .resume-invisible-media-not-print}
-## Начинающий Python программист
+## Python программист
 {:.resume-h}
 К.ф.-м.н. по специальности "Физика конденсированного состояния"
 <div class="resume-external-links resume-invisible-media-not-print">
@@ -52,13 +60,7 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
     <tr class="resume-table-no-background">
       <td><code>Языки&nbsp;программирования</code></td>
       <td>
-        <a href="https://www.python.org/">Python</a>
-        (включая синтаксис
-        <a href="https://docs.python.org/3/library/typing.html">type hints</a>,
-        утилиты
-        <a href="https://pylint.pycqa.org/en/latest/">pylint</a>,
-        <a href="http://mypy-lang.org/">mypy</a>,
-        <a href="https://docs.python.org/3/library/venv.html">venv</a>),
+        <a href="https://www.python.org/">Python</a>,
         <a href="https://www.gnu.org/software/bash/">Bash</a>,
         <span markdown="1">SQL</span>
       </td>
@@ -66,15 +68,25 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
     <tr class="resume-table-no-background">
       <td><code>Фреймворки/библиотеки</code></td>
       <td>
+        <a href="https://fastapi.tiangolo.com/">FastAPI</a>,
+        <a href="https://www.django-rest-framework.org/">Django REST framework</a>,
         <a href="https://www.djangoproject.com/">Django</a>,
         <a href="https://flask.palletsprojects.com/">Flask</a>,
-        <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>,
         <a href="https://www.psycopg.org/psycopg3/">psycopg3</a>,
-        <a href="https://googleapis.github.io/google-api-python-client/docs/">google-api-python-client</a>,
-        <a href="https://python-telegram-bot.org">python-telegram-bot</a>,
-        <a href="https://docs.python.org/3.9/library/unittest.html?highlight=unittest#module-unittest">unittest</a>,
+        <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>,
+        <a href="https://docs.pydantic.dev/latest/">Pydantic</a>,
         <a href="https://docs.pytest.org">pytest</a>,
-        <a href="https://asciimatics.readthedocs.io/en/stable/">asciimatics</a>
+        <a href="https://docs.python.org/3.10/library/unittest.html?highlight=unittest#module-unittest">unittest</a>,
+        <a href="https://python-telegram-bot.org">python-telegram-bot</a>
+        <br>
+        Data science, <span markdown="1">ML</span>:
+        <a href="https://pandas.pydata.org/">Pandas</a>,
+        <a href="https://numpy.org/">NumPy</a>,
+        <a href="https://scikit-learn.org/stable/">scikit-learn</a>,
+        <a href="https://keras.io/">Keras</a>,
+        <a href="https://keras.io/keras_tuner/">KerasTuner</a>,
+        <a href="https://scipy.org/">SciPy</a>,
+        <a href="https://matplotlib.org/">Matplotlib</a>
       </td>
     </tr>
     <tr class="resume-table-no-background">
@@ -88,6 +100,8 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
       <td><code>Другое</code></td>
       <td>
         <a href="https://git-scm.com/">Git</a>,
+        <a href="https://dvc.org/">DVC</a>,
+        <a href="https://docs.gitlab.com/ee/ci/">GitLab CI/CD</a>,
         <a href="https://github.com/Yo1k">GitHub</a>,
         <a href="https://www.docker.com/">Docker</a>,
         <a href="https://getbootstrap.com/">Bootstrap</a>,
@@ -98,68 +112,36 @@ custom_description: Junior Python software engineer, PhD in Condensed Matter Phy
   </tbody>
 </table>
 
-#### Проекты
-{:.resume-h}
----
-
-<div class="resume-experience" markdown="1">
-
-* **[yatube](https://github.com/Yo1k/yatube)**
-  (Python, Django, SQLite, Bootstrap)&mdash;социальная сеть для блогеров.
-  Ознакомиться с сервисом можно здесь: [https://yo1k.pythonanywhere.com](https://yo1k.pythonanywhere.com).
-
-  Авторизованные пользователи могут создавать/изменять посты,
-  подписываться на других авторов для формирования персональной ленты публикаций, комментировать чужие посты.
-* **[qaws](https://github.com/Yo1k/qaws-app)**
-  (Python, Flask, PostgreSQL, psycopg3, Docker)&mdash;веб-сервис: получает POST-запрос от клиента,
-  для его обработки делает GET-запрос к стороннему публичному HTTP API, сохраняет данные полученные
-  от стороннего сервиса в своё хранилище, шлёт ответ на оригинальный POST-запрос. Как Python-приложение, так
-  и PostgreSQL запускаются в Docker контейнерах.
-  **[qaws-alchemy](https://github.com/Yo1k/questions-service)**&mdash;версия веб-сервиса с использованием ORM
-  SQLAlchemy через расширение Flask-SQLAlchemy.
-* **[order-management](https://github.com/Yo1k/order-management)**
-  (Python, google-api-python-client, PostgreSQL, python-telegram-bot, Docker)&mdash;сервис потока данных:
-  получает данные о заказах из Google Sheets и сохраняет их в своё хранилище с добавлением
-  перевода стоимости заказов из USD в RUB согласно котировкам, взятым из публичного HTTP API. Сервис
-  также проверяет срок поставки заказов и отправляет уведомления в Telegram о заказах с истёкшим сроком.
-* **[tic-tac-toe](https://github.com/Yo1k/tic-tac-toe)** 
-  (Python, unittest, asciimatics, pylint, mypy)&mdash;многопользовательская пошаговая игра в процессе разработки.
-  На текущий момент реализованы:
-  * бизнес-логика игры
-  * простейший AI
-  * тесты бизнес-логики и AI
-  * текстовый UI (использован фреймворк asciimatics)
-  * [Bash скрипты](https://github.com/Yo1k/tic-tac-toe/blob/master/contributing.md#build-related-commands) 
-  автоматизирующие управление виртуальным окружением Python, проверку type hints, запуск тестов, сборку 
-  дистрибутивов для разных целевых платформ (в случае использования нативных зависимостей, платформа
-  учитывается при поиске и скачивании подходящего артефакта)
-</div>
-
 #### Опыт работы
 {:.resume-h}
 ---
 
-<div class="resume-experience" markdown="1">
-
-  Самостоятельное обучение Python с использованием [официальной документации](https://docs.python.org/)
-  (выработал навык быстрой ориентации в ней), текста различных [PEP]ов,
-  книги "[Python 3 Object-Oriented Programming](https://www.amazon.com/Python-Object-Oriented-Programming-maintainable-object-oriented/dp/1789615852)"
-  by [Dusty Phillips](https://dusty.phillips.codes), 
-  открытых лекций на канале [Computer Science Center](https://www.youtube.com/playlist?list=PLlb7e2G7aSpQhNphPSpcO4daaRPeVstku),
-  ресурсов [Stack Overflow](https://stackoverflow.com/) и [Real Python](https://realpython.com/).
-
-  Изучение SQL с использованием [bipp SQL tutorial](https://bipp.io/sql-tutorial), 
-  [официальной документации](https://www.postgresql.org/docs/current/sql-syntax.html) PostgreSQL,
-  упражнений на [pgexercises.com](https://www.pgexercises.com).
-</div>
-
 <h6 class="resume-h">
-  <a href="https://yandex.ru/support/praktikum/" title="Яндекс Практикум">
-    <img src="{% link /assets/img/resume/yandex-practicum-logo.png %}" alt="Logo" style="width: auto; height: 1.1em;">
-    <span markdown="1">Яндекс Практикум</span>
+  <a href="https://keyhabits.pro/" title="KeyHabits">
+    <img src="{% link /assets/img/resume/keyhabits-logo.png %}" alt="Logo" style="width: auto; height: 1.1em;">
+    <span markdown="1">KeyHabits</span>
   </a>
+  / <span class="resume-insignificant resume-normal-font-weight">Москва, Россия</span>
 </h6>
-_Студент, направление ["Python-разработчик"](https://practicum.yandex.ru/backend-developer/)_ / <span class="resume-insignificant">Июнь 2022&ndash;настоящее время</span>
+_Программист_ / <span class="resume-insignificant">Февраль 2023&ndash;настоящее время</span>
+<div class="resume-experience" markdown="1">
+  - __KPMI датасет__ (Pandas)&mdash;датасет, основанный на данных [kpmi-сервиса](https://kpmi.ru/) с классификацией записей по сферам деятельности
+    - проектирование и разработка классификатора сфер деятельности и профессий по стандарту [ОКЗ](https://profstandart.rosmintrud.ru/obshchiy-informatsionnyy-blok/spravochniki-i-klassifikatory-i-bazy-dannykh/okz/);
+    - переработка существующего классификатора сфер деятельности.
+  - __Модели KPMI__ (Keras, KerasTuner, Pandas, NumPy, scikit-learn, SciPy, Matplotlib)
+    - создание, обучение и оценка ансамблей глубоких нейронных сетей для формирования прогностической оценки предрасположенности индивида к работе в сферах деятельности на основе KPMI датасета;
+    - исследование влияния размеров датасетов на показатели производительности KPMI моделей, результаты
+    отражены в [препринте](http://dx.doi.org/10.13140/RG.2.2.27943.52644);
+    - создание гипертюнера для поиска гиперпараметров моделей реализующих наилучшую производительность.
+  - __Внутренний сервер прогнозов__ (FastAPI, psycopg3, PostgreSQL, Pydantic, pytest)
+    использующий предварительно обученные модели KPMI
+    - перенос кода с Flask на FastAPI;
+    - рефакторинг кода для автоматической генерации документации, соответствующей спецификации [OpenAPI](https://spec.openapis.org/oas/latest.html);
+    - добавление пула соединений к базе данных для повышения производительности.
+  - __DevOps__ (DVC, GitLab CI/CD, Docker)
+    - внедрил использование DVC для версионирования данных и моделей на выделенном внутреннем сервере-хранилеще;
+    - модифицировал пайплайн деплоя _внутреннего сервера прогнозов_: формирование артефакта с исходным кодом и моделями, функциональное тестирование артефакта и деплой в облачный сервис.
+</div> 
 
 <h6 class="resume-h">
   <a href="https://www.hse.ru/" title="НИУ ВШЭ">
@@ -168,7 +150,7 @@ _Студент, направление ["Python-разработчик"](https:
   </a>
   / <span class="resume-insignificant resume-normal-font-weight">Москва, Россия</span>
 </h6>
-_Доцент, Факультет физики_ / <span class="resume-insignificant">Сентябрь 2020&ndash;настоящее время</span>
+_Доцент, Факультет физики_ / <span class="resume-insignificant">Сентябрь 2020&ndash;Август 2023</span>
 
 <h6 class="resume-h">
   <a href="https://www.gpi.ru" title="ИОФ РАН">
@@ -182,6 +164,14 @@ _Младший научный сотрудник, [отдел ТИАМ]_ / <spa
 #### Образование
 {:.resume-h}
 ---
+
+<h6 class="resume-h">
+  <a href="https://yandex.ru/support/praktikum/" title="Яндекс Практикум">
+    <img src="{% link /assets/img/resume/yandex-practicum-logo.png %}" alt="Logo" style="width: auto; height: 1.1em;">
+    <span markdown="1">Яндекс Практикум</span>
+  </a>
+</h6>
+_Окончил курс по направлению ["Python-разработчик"](https://practicum.yandex.ru/backend-developer/)_ / <span class="resume-insignificant">Июнь 2022&ndash;Март 2023</span>
 
 <h6 class="resume-h">
   <a href="https://www.gpi.ru" title="ИОФ РАН">
